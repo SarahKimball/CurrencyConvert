@@ -1,0 +1,80 @@
+### Conceptual Exercise
+
+Answer the following questions below:
+
+1. What are important differences between Python and JavaScript?
+Syntax: Python has a simpler and more consistent syntax, which makes it easier to learn and read. JavaScript, on the other hand, has a more complex syntax that can be difficult to master.
+
+    Types: Python is a strongly-typed language, which means that variables must be declared with a specific data type. JavaScript, on the other hand, is a loosely-typed language, which allows variables to be assigned different data types at different times.
+    Purpose: Python is generally used for data analysis, scientific computing, and machine learning. JavaScript, on the other hand, is used primarily for web development, especially for client-side scripting.
+    Execution: Python is an interpreted language, which means that code is executed line-by-line at runtime. JavaScript, on the other hand, can be either interpreted or compiled, depending on the implementation.
+    Libraries and frameworks: Python has a vast collection of libraries and frameworks for various purposes, including NumPy, Pandas, and TensorFlow for data analysis and machine learning. JavaScript has many libraries and frameworks for web development, such as React and Angular.
+    Scoping: Python has block-level scoping, which means that variables defined inside a block of code are only accessible within that block. JavaScript, on the other hand, has function-level scoping, which means that variables defined inside a function are only accessible within that function.
+    Debugging: Python has a more advanced debugging system than JavaScript, with tools like pdb and PyCharm. JavaScript, on the other hand, relies heavily on browser-based debugging tools.
+
+2. Given a dictionary like ``{"a": 1, "b": 2}``: , list two ways you
+  can try to get a missing key (like "c") *without* your programming
+  crashing.
+
+    Use the get() method with a default value: The get() method can be used to retrieve a value for a given key from a dictionary, but if the key does not exist, it returns None by default. You can provide a second argument to get() to return a default value instead of None.
+    Use a try-except block: Another way to handle a missing key is to use a try-except block to catch the KeyError exception that would be raised if the key is not in the dictionary.
+
+3. What is a unit test?
+
+    A unit test is a type of automated test that is focused on verifying the functionality of a small, isolated piece of code known as a "unit." The purpose of a unit test is to ensure that each unit of code works as expected, and to catch any errors or defects that may be introduced as changes are made to the code over time.
+    Unit tests are typically automated using a testing framework, which provides tools for defining and running tests, as well as reporting on the results. Some popular testing frameworks for Python include unittest, pytest, and nose.
+ 
+4. What is an integration test?
+    An integration test is a type of automated test that focuses on verifying the interactions between different components or modules of an application. Unlike a unit test, which tests individual units of code in isolation, an integration test examines how different units work together to achieve a larger goal.
+    In an integration test, the different components of an application are brought together and tested as a whole, to ensure that they integrate and function correctly together. For example, an integration test for a web application might involve testing how different modules like the database, backend server, and front-end UI work together to provide a seamless user experience.
+    The scope of an integration test can vary depending on the complexity of the application being tested. Some integration tests may involve just a few components, while others may test the entire application end-to-end. In general, integration tests are designed to catch any issues that may arise due to the interaction between different components of an application, such as unexpected behavior or compatibility issues.
+    Integration tests can be more complex to set up and run than unit tests, as they typically require more infrastructure and may involve multiple systems or services. However, they provide an important layer of testing that can help to ensure the overall quality and functionality of an application, and catch issues that may be missed by other types of tests.
+
+5. What is the role of web application framework, like Flask?
+    A web application framework, like Flask, provides a set of tools and libraries that make it easier to develop, deploy, and maintain web applications. The main role of a web application framework is to provide a structured approach to building web applications that reduces the amount of code and effort required to achieve common tasks, such as handling user requests, managing sessions, and interacting with databases.
+    Here are some of the key roles and benefits of using a web application framework like Flask:
+        Routing: Flask provides a built-in routing system that makes it easy to map URLs to specific views or functions, allowing you to define the different pages and endpoints of your web application.
+        Request handling: Flask provides a request object that encapsulates information about the current HTTP request, such as headers, parameters, and data. It also provides a response object that allows you to return data to the client in a structured way.
+        Templates: Flask includes a template engine that allows you to define HTML templates with placeholders for dynamic content, making it easy to generate HTML pages with data from your application.
+        Sessions: Flask provides a session object that allows you to store data across multiple requests, such as user authentication information or shopping cart contents.
+        Database integration: Flask provides support for interacting with a wide range of databases, including SQL and NoSQL databases, through extensions like Flask-SQLAlchemy and Flask-MongoEngine.
+        Middleware: Flask allows you to add middleware components that can modify requests and responses as they pass through the application, such as adding headers, logging requests, or handling errors.
+
+6. You can pass information to Flask either as a parameter in a route URL
+  (like '/foods/pretzel') or using a URL query param (like
+  'foods?type=pretzel'). How might you choose which one is a better fit
+  for an application?
+
+    The choice between passing information to Flask as a parameter in a route URL or using a URL query parameter depends on the specific needs and requirements of the application.
+    Here are some considerations to keep in mind when choosing between the two options:
+        Simplicity: Passing information as a parameter in a route URL is generally simpler and more straightforward, as it does not require any additional parsing or decoding of URL query parameters. This can be a good choice for applications with a small number of parameters or simple requirements.
+        Readability: Passing information as a parameter in a route URL can make the URL more readable and user-friendly, as it can help to convey the structure and hierarchy of the application's resources. This can be particularly important for applications with a large number of pages or complex routing requirements.
+        Security: URL query parameters can be more easily manipulated by users, as they are visible and editable in the browser's address bar. This can pose a security risk if the parameters are used to authorize or authenticate users, or if they contain sensitive information.
+        Searchability: URL query parameters can be useful for applications that need to support search or filtering functionality, as they can be used to specify search criteria or filter results. This can be a good choice for applications with a large amount of data or complex search requirements.
+
+7. How do you collect data from a URL placeholder parameter using Flask?
+    In Flask, you can collect data from a URL placeholder parameter using the route() decorator with a URL pattern that includes a placeholder for the parameter. 
+- How do you collect data from the query string using Flask?
+
+8. How do you collect data from the body of the request using Flask?
+    In Flask, you can collect data from the body of a request using the request object. The request object is an instance of the Request class that provides access to the incoming HTTP request data
+
+9. What is a cookie and what kinds of things are they commonly used for?
+    A cookie is a small piece of data that a web server sends to a user's web browser. The browser stores this data on the user's computer, and includes it in subsequent requests to the same server. Cookies are commonly used to store information about a user's preferences or activity on a website, such as their login credentials, shopping cart contents, or language preference.
+    Cookies typically consist of a name-value pair, along with optional attributes such as an expiration date and a domain name. The name is a string that identifies the cookie, while the value is the data being stored. When a user visits a website, the server can set a cookie by sending an HTTP response that includes a Set-Cookie header.
+    Cookies are commonly used for a variety of purposes, including:
+        Session management: Cookies can be used to keep track of a user's session on a website, allowing them to remain logged in or maintain their shopping cart contents across multiple pages.
+        Personalization: Cookies can be used to store a user's preferences or other information about them, such as their language preference or their recently viewed products.
+        Tracking: Cookies can be used to track a user's behavior on a website, such as which pages they visit or which products they view, in order to provide targeted advertising or recommendations.
+        Analytics: Cookies can be used to collect anonymous data about how users interact with a website, such as which pages are most popular or which devices are most commonly used. This data can be used to improve the website's design and functionality.
+
+
+10. What is the session object in Flask?
+    The session object in Flask is a way to store information that persists across requests from the same client. A session is a dictionary-like object that can be used to store arbitrary data, similar to a cookie. However, unlike cookies, the data stored in a session is stored on the server side, rather than on the client's computer.
+    The session object in Flask is implemented using cookies to maintain a session ID, which is a unique identifier for each user's session. When a user visits a website that uses sessions, the server sends a session ID to the user's browser in a cookie. The browser then sends this session ID back to the server with each subsequent request, allowing the server to retrieve the correct session data for the user.
+    To use the session object in Flask, you must first enable it by setting a secret key in your Flask application. This secret key is used to sign the session cookie, ensuring that it cannot be tampered with by malicious users. 
+    Note that the session object in Flask behaves like a dictionary, so you can use standard dictionary operations to get and set values in the session. However, it's important to be aware that the data stored in the session is stored on the server side, so you should avoid storing sensitive information in the session, such as passwords or credit card numbers.
+
+11. What does Flask's `jsonify()` do?
+    Flask's jsonify() function is a utility function that returns a Flask Response object containing a JSON-formatted version of the input data. It takes a Python object (usually a dictionary or a list) as input and converts it to a JSON string, then sets the appropriate headers on the Response object to indicate that it is a JSON response.
+    Using jsonify() can save you a lot of manual string manipulation when building JSON responses in Flask, and it ensures that the response is properly formatted and correctly identified as a JSON response.
