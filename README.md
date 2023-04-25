@@ -11,15 +11,15 @@ Clone the repository and navigate to the root folder.
 Create a virtual environment using python -m venv venv command and activate it using source venv/bin/activate (on Linux/Mac) or venv\Scripts\activate (on Windows).
 Install the required packages using pip install -r requirements.txt.
 Set your Alpha Vantage API key as the API_KEY variable in app.py.
-   Steps:
-      Go to the Alpha Vantage website and create an account if you don't have one already.
-      After you've logged in, navigate to the API Documentation page.
-      Scroll down to the "Currency Exchange Rates" section and click on the "Get your free API key today" button.
-      Follow the instructions to generate your API key. You should receive an email with the API key shortly after you complete the form.
-      Copy the API key from the email or from the Alpha Vantage website.
-      Open app.py in a text editor and find the line that says API_KEY = 'GDC2AES9MZ33F6W4'.
-      Replace the value 'GDC2AES9MZ33F6W4' with your API key (enclosed in quotes).
-      Save the file.
+   (Steps:
+      1. Go to the Alpha Vantage website and create an account if you don't have one already.
+      2. After you've logged in, navigate to the API Documentation page.
+      3. Scroll down to the "Currency Exchange Rates" section and click on the "Get your free API key today" button.
+      4. Follow the instructions to generate your API key. You should receive an email with the API key shortly after you complete the form.
+      5. Copy the API key from the email or from the Alpha Vantage website.
+      6. Open app.py in a text editor and find the line that says API_KEY = 'GDC2AES9MZ33F6W4'.
+      7. Replace the value 'GDC2AES9MZ33F6W4' with your API key (enclosed in quotes).
+      8. Save the file.)
 Run the application using python app.py.
 Open your web browser and navigate to http://127.0.0.1:5000/.
 Enter the amount, the source currency, and the target currency, and click the "Convert" button to get the result.
