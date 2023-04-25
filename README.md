@@ -2,6 +2,10 @@
 Currency Exchange Rate Converter
 This is a simple Flask application that converts one currency to another currency based on the latest exchange rate using the Alpha Vantage API.
 
+
+
+
+
 How to run the application
 Clone the repository and navigate to the root folder.
 Create a virtual environment using python -m venv venv command and activate it using source venv/bin/activate (on Linux/Mac) or venv\Scripts\activate (on Windows).
@@ -21,10 +25,17 @@ Open your web browser and navigate to http://127.0.0.1:5000/.
 Enter the amount, the source currency, and the target currency, and click the "Convert" button to get the result.
 
 
+
+
+
+
 Files in the repository
 app.py - This is the main Python file that contains the Flask application.
 templates/home.html - This is the HTML template for the home page of the application.
 requirements.txt - This file contains a list of the required packages to run the application.
+
+
+
 
 
 How it works
